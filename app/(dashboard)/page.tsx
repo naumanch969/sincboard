@@ -1,9 +1,23 @@
-import { UserButton } from "@clerk/nextjs";
+"use client"
 
-export default function Dashboard() {
+import { UserButton, useOrganization } from "@clerk/nextjs";
+import { EmptyOrg } from "./_components/empty-org";
+import { BoardList } from "./_components/board-list";
+
+export default function Dashboard({ searchParams }: { searchParams: { search?: string, favorites?: string } }) {
+
+  const { organization } = useOrganization()
+
   return (
-    <div className="flex-1 h-[calc(100% - 80px)] p-6 bg-red-500 ">
-      Dashboard
+    <div style={{ height: 'calc(100% - 80px)' }} className="flex-1 p-6 ">
+      {
+        !organization
+          ? <EmptyOrg />
+          : <BoardList
+            query={searchParams}
+            orgId={organization.id}
+          />}
+
     </div>
   )
 }
