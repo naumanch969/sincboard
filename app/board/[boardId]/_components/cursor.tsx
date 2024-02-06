@@ -33,3 +33,4 @@ export const Cursor = memo(({ connectionId }: { connectionId: number }) => {
     )
 })
 
+Cursor.displayName = 'Cursor'
