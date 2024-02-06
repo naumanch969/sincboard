@@ -5,7 +5,7 @@ import {
   LiveObject,
 } from "@liveblocks/client";
 import { createRoomContext } from "@liveblocks/react";
-import { Layer } from "./types/canvas";
+import { Color, Layer } from "./types/canvas";
 
 // publicApiKey: "pk_dev_iXTnNWgrgtsdIfKd0xKfaeEbAIDC8Zn5qmdTpNkVXDMUo1NNq04WYWM9o71Hgfpw", // it is in case if we provide access to room to everyone
 const client = createClient({
@@ -17,8 +17,10 @@ const client = createClient({
 // and that will automatically be kept in sync. Accessible through the
 // `user.presence` property. Must be JSON-serializable.
 type Presence = {
-  cursor: { x: number; y: number } | null;  // cursors of each connected user
-  selection: string[]
+  cursor: { x: number; y: number } | null; // cursors of each connected user
+  selection: string[];
+  pencilDraft: [x: number, y: number, pressure: number][] | null;
+  penColor: Color | null;
 };
 
 // Optionally, Storage represents the shared document that persists in the

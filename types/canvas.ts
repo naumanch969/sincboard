@@ -84,7 +84,8 @@ export enum Side {
 
 export type CanvasState =
   | {
-      mode: CanvasMode.None | CanvasMode.SelectionNet;
+      mode: CanvasMode.None 
+      // | CanvasMode.SelectionNet;
     }
   | {
       mode: CanvasMode.SelectionNet;
