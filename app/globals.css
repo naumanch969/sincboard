@@ -76,7 +76,29 @@ body,
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+
+.dev-banner {
+  display: none;
+}
+
+/* In Invite Popover */
+.cl-internal-b3fm6y {
+  display: none;
+}
+
+/* In Profile Settings Popover */
+.cl-userButtonPopoverFooter {
+  display: none;
+}
+
+/* In Create Organization Popover */
+.cl-organizationSwitcherPopoverFooter{
+  display: none;
 }

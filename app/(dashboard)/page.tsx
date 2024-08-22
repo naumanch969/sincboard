@@ -1,6 +1,6 @@
 "use client"
 
-import { UserButton, useOrganization } from "@clerk/nextjs";
+import { useOrganization } from "@clerk/nextjs";
 import { EmptyOrg } from "./_components/empty-org";
 import { BoardList } from "./_components/board-list";
 

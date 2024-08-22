@@ -10,7 +10,6 @@ import Loading from "@/components/auth/loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
-
 export const metadata: Metadata = {
   title: "SyncBoard - Whiteboard application",
   description: "Whiteboard application",
