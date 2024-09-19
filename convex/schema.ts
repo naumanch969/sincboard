@@ -9,8 +9,8 @@ export default defineSchema({
     authorName: v.string(),
     imageUrl: v.string(),
   })
-    .index("by_org", ["orgId"]) // it may also to query the table, TODO: see the diff between index and searchIndex
-    .searchIndex("search_title", {  // ig it is to query the table
+    .index("by_org", ["orgId"])
+    .searchIndex("search_title", {
       searchField: "title",
       filterFields: ["orgId"],
     }),

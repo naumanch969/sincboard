@@ -99,6 +99,11 @@ body,
 }
 
 /* In Create Organization Popover */
-.cl-organizationSwitcherPopoverFooter{
+.cl-organizationSwitcherPopoverFooter {
   display: none;
+}
+
+/* Signin page */
+.cl-internal-hegiim {
+  display: hidden !important;
 }
